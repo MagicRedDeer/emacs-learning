@@ -1,0 +1,129 @@
+* Movements:
+
+|----+-----------+------------------------------------|
+| S# | Key Combo | Function                           |
+|----+-----------+------------------------------------|
+|  1 | C-f       | Move forward a character           |
+|  2 | C-b       | Move backward a character          |
+|----+-----------+------------------------------------|
+|  3 | M-f       | Move forward a word                |
+|  4 | M-b       | Move backward a word               |
+|----+-----------+------------------------------------|
+|  5 | C-n       | Move to next line                  |
+|  6 | C-p       | Move to previous line              |
+|----+-----------+------------------------------------|
+|  7 | C-a       | Move to beginning of line          |
+|  8 | C-e       | Move to end of line                |
+|----+-----------+------------------------------------|
+|  9 | M-a       | Move back to beginning of sentence |
+| 10 | M-e       | Move forward to end of sentence    |
+|----+-----------+------------------------------------|
+| 11 | M-<       | Goto beginning of document         |
+| 12 | M->       | Goto end of document               |
+|----+-----------+------------------------------------|
+
+* Command Arguments:
+  - C-u <arg> <function or key combo> 
+
+* Canceling:
+  - C-g
+  - <ESC> <ESC> <ESC>
+
+* Window:
+  
+|-----------+-----------------------------------|
+| Key Combo | Function                          |
+|-----------+-----------------------------------|
+| C-x 1     | Expand Current Window             |
+| C-x 2     | Split Current Window Vertically   |
+| C-x 3     | Split Current Window Horizontally |
+| C-x o     | Go to other window                |
+| C-M-v     | Scroll the other window     |
+| C-v       | Scroll down current window        |
+| M-v       | Scroll up current window       |
+|-----------+-----------------------------------|
+
+* Inserting and Deleting
+
+|----------------------+--------------------------------------------------|
+| Key Combo            | Function                                         |
+|----------------------+--------------------------------------------------|
+| <DEL> or <BSP>       | Remove before cursor                             |
+| Delete or C-d        | Remove after cursor                              |
+| Return               | Enter Newline                                    |
+| M-<DEL>              | Kill the world immediately before the cursor     |
+| M-d                  | Kill the next word after the cursor              |
+| C-k                  | Kill from the cursor position to the end of line |
+| M-k                  | Kill to the end of current sentence              |
+| C-<SPC> <Motion> C-w | Select between start and end of motion and Kill  |
+| C-<SPC> <Motion> M-w | Select between start and end of motion and Copy  |
+| C-y                  | (Yank) Paste text from killed line               |
+| C-y M-y              | Paste text from previously killed line           |
+|----------------------+--------------------------------------------------|
+
+* Undo
+  - C-/ or C-x u
+
+* Files
+
+|-----------+---------------------------|
+| Key Combo | Function                  |
+|-----------+---------------------------|
+| C-x C-f   | Find a file               |
+| C-x C-s   | Save the file             |
+| C-x 4 C-f | Find file in other window |
+|-----------+---------------------------|
+
+* Buffers
+|-----------+--------------------------|
+| Key Combo | Function                 |
+|-----------+--------------------------|
+| C-x C-b   | List buffers             |
+| C-x b     | Switch To Buffer by name |
+| C-x s     | Save some buffers        |
+|-----------+--------------------------|
+
+* Extended Commands
+
+|-----------+--------------------------- |
+| Key Combo | Function                  |
+|-----------+---------------------------|
+| C-x C-f   | Find file                 |
+| C-x C-s   | Save file                 |
+| C-x s     | Save some buffers         |
+| C-x C-b   | List buffers              |
+| C-x b     | Switch buffer             |
+| C-x C-c   | Quit Emacs                |
+| C-x 1     | Delete all but one window |
+| C-x u     | Undo                      |
+|-----------+---------------------------|
+
+* Modes
+  - To Change the mode type M-x
+
+** Auto Fill Mode
+   - Toggle by typing M-x auto-fill-mode
+   - Wraps the line around at 70 characters by default
+   - Change wrapping to <N> characters by C-u <N> C-x f
+   - To re-fill paragraph if typing in the middle of a paragraph M-q
+
+* Searching
+  - C-s to start a search
+  - C-s to search again
+  - <DEL> while searching goes to earlier occurence, deletes character
+    from search if at earliest
+  - <Return> To terminate search
+
+* Help
+
+|-----------------+-----------------------------------------------|
+| Key Combo       | Function                                      |
+|-----------------+-----------------------------------------------|
+| C-h c <command> | gives help for command <command>              |
+| C-h m           | gives help for current mode (major and minor) |
+| C-h k <combo>   | gives help for key combo <combo>              |
+| C-h f <func>    | gives help for function <func>                |
+| C-h v <var>     | gives help for variables                      |
+| C-h a <keyword> | gives help for given <keyword>                |
+| C-h i           | Read included manuals                         |
+|-----------------+-----------------------------------------------|

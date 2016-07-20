@@ -1,0 +1,29 @@
+* Getting Started and Playing Games
+** Info Manual
+  - launch info manual by typing: C-h i
+  - mEmacs to jump to Emacs manual
+  - M-x to run command by name
+  - u to go up
+  - l to go to last page
+
+** Blackbox Game
+  - launch games by typing M-x blackbox
+  - C-h m to view help
+  - C-h f blackbox to view more help
+** Tutorial
+   - C-h t to view tutorial
+
+* Customization and Themes
+** Customize
+   - M-x customize to launch customization interface
+   - Goto Enviroment -> Frames options
+   - Disable Toolbar, Menubar, Scrollbar and Save state for future sessions
+   - View Emacs file to compare changes
+** Themes
+   - Goto Faces->Basic Faces->Default face
+   - Change options and save State in .emacs file
+   - M-x customize-themes
+   - Themes are overridden by default face setting so disable foreground/background settings from Default face options
+
+* Installing Packages and extensions
+
