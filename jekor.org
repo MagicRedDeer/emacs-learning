@@ -26,4 +26,10 @@
    - Themes are overridden by default face setting so disable foreground/background settings from Default face options
 
 * Installing Packages and extensions
-
+** list packages 
+   - M-x list-packages to see list of packages
+   - scroll and use 'i' to mark for installation and 'x' to install
+** package archives
+   - add melpa package archive and save to .emacs
+   - in list-packages use U to mark for upgrade and x for executing
+   - 
