@@ -32,4 +32,66 @@
 ** package archives
    - add melpa package archive and save to .emacs
    - in list-packages use U to mark for upgrade and x for executing
-   - 
+
+* Exploring the filesystem with Dired 
+  Dired stands for directory editor
+  In order to enter dired mode type C-x C-f and Press return selecting a directory
+** dired mode 
+   - In dired mode we can use movement and search to find file
+   - Take the cursor to the appropriate line and Press Return to start editing a file
+   - To mark for deletion, press d, to execute deletion, press e. you can delete multiple files and directories.
+   - To add a directory use a '+' sign.
+   - To edit a new file enter name of file and Press Return.
+   - To refresh the contents of a buffer press 'g'
+   - To copy files press S-C
+   - To run a shell command on a file use '!' while selecting the file
+   - To run a command over multiple files use 'm' to mark them and then run
+   - To toggle marked files use 't'
+   - To select all directories use '* /'
+   - To search in selected files use 'A' to write the regular expression 'M-,' to cycle through occurrences
+   - Use Shift 'U' to remove 'C' indicators
+   - C-x C-q to make the dired buffer editable
+   - M-% to find and replace 'editable' state
+   - C-h i -> emacs -> Dired to get help
+
+* Managing and Finding Buffers
+  - C-x b to change buffers
+  - C-x C-b to see a buffer list
+  - Use ido-mode for convenience in buffer switching
+  - Use Uniquify -> Uniquify Buffer Name Style options in 'customize' to identify buffers in the buffers list
+  - Use M-x occur to list regexp matches in one buffer
+  - Use M-x multi-occur to list regexp matches in many buffers
+** ido mode
+   - Use C-f to temporarily disable ido mode to make a new file!
+   - Can use flexible matching option in *customize*
+
+
+* Searching and Finding Files
+  - M-x find-dired to find a file in a directory
+  - M-x locate to find files faster in entire directory
+  - C-u <args> M-x locate to modify the locate command
+  - M-x rgrep to find files recursively based on their content
+  - M-x lgrep to find files based on content in a single directory
+  - Use the 'grep-a-lot' package to refer to earlier 
+
+* Command line
+  - Use server-mode to start an emacs server and use emacsclient add a buffer to an existing session from the command line
+  - Use M-x term to run a terminal emulator
+  - Use M-x shell to fun a shell
+  - Use M-x eshell to run an email shell
+
+* Beyond ASCII
+  - use M-x set-input-method to change input methods
+  - use C-q <octal|hexadeci> to enter a character using quoted character mode
+  - can also use tex system binding to enter special characters
+
+* Keyboard Macros
+  - C-x ( to start recording
+  - C-x ) to stop recording
+  - C-x e to (to stop recording and ) replay macro
+  - C-x C-k <space> to debug macro, <space> again to move forward in debugger
+  - C-x C-k e to edit macro
+  - C-x C-k n to name the macro
+  - M-x insert-kbd-macro to insert macro code to current buffer (or .emacs) file
+  - C-x C-k l to view latest entered commands
+  - To learn more about macro, M-x find-library kmacro.el or edmacro.el

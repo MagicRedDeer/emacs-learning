@@ -1,3 +1,18 @@
+(require 'package)
+
+;;; from purcell/emacs.d
+(defun require-package (package &optional min-version no-refresh)
+  "Install given PACKAGE, optionally requiring MIN-VERSION.
+If NO-REFRESH is non-nil, the available package lists will not be
+re-downloaded in order to locate PACKAGE."
+  (if (package-installed-p package min-version)
+      t
+    (if (or (assoc package package-archive-contents) no-refresh)
+        (package-install package)
+      (progn
+        (package-refresh-contents)
+	(require-package package min-version t)))))
+
 (package-initialize)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -15,9 +30,12 @@
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
-     ("melpa" . "https://stable.melpa.org/packages/"))))
- '(package-selected-packages (quote (solarized-theme org)))
+     ("melpa" . "https://melpa.org/packages/")
+     ("marmalade" . "https://marmalade-repo.org/packages/"))))
+ '(package-selected-packages (quote (evil nyan-mode solarized-theme org)))
+ '(read-quoted-char-radix 16)
  '(scroll-bar-mode nil)
+ '(server-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -26,3 +44,11 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 100 :width normal :foundry "outline" :family "DejaVu Sans Mono")))))
 
+(require-package 'evil)
+
+(setq evil-search-module 'evil-search
+      evil-want-C-u-scroll t
+      evil-want-C-w-in-emacs-state t)
+
+(require 'evil)
+(evil-mode t)
